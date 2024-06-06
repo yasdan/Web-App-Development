@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registraion page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form{
+                background-color: aqua;
+                color: blue;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: large;
+                align-items: center;
+                margin: 30px;
+                padding: 4px;
+               
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="text-align: center; color: purple;">
+           <h1> Registration Form for College Day Events</h1>
+        </header>
+        <div> <a href="home.html">Go to Home Page</a></div>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="email">E- Mail:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+            <input type="radio" id="BTech" name="B.Tech" value="B.Tech">
+            <label for="BTech">B.Tech</label> <br>
+            <input type="radio" id="MTech" name="MTech" value="M.Tech">
+            <label for="MTech">M.Tech</label> <br>
+
+            <input type="checkbox" id="hobby1" name="hobby1" value="Music">
+            <label for="hobby1"> I Love Music</label><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="Reading">
+            <label for="hobby2"> I read Books</label><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="Blogging">
+            <label for="hobby3"> I do Blogging</label> <br>
+           
+            <label for="year">Select the Year</label><br>
+            <select id="year" name="year">
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
