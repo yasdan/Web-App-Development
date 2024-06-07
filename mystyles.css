@@ -1,0 +1,73 @@
+body{ background-color: #b4f870;}
+header{
+    background-color: aqua;
+    color:darkorange;
+    text-align: center;
+}
+nav{
+    text-align:center;
+    background-color: lightgreen;
+    font-size:large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a{
+    background-color: yellow;
+    color:red;
+}
+#sec1{
+    background-color: #ffee88;
+    text-align: left    ;
+    color: #000;
+
+}
+h1{
+    color:Blue;
+    font-family:'Courier New', Courier, monospace ;
+}
+#sec2{
+    background-color: orange;
+    color:blue;
+    width: 200px;
+    height: 200px;
+}
+@media(hover:hover) {
+    #sec2:hover{
+        background-color: #0db1f2;
+        transition-duration:2s;
+        
+    }
+}
+
+/* The animation code */
+@keyframes example {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+   }
+
+  #d1{ width: 300px;
+   height: 300px;
+   position: relative;
+   background-color: red;
+   animation-name: example;
+   animation-duration: 4s;
+   animation-iteration-count: 3;
+  }
+  img{
+    border-radius: 65px;
+    width: 300px;
+    height: 300px;
+    -webkit-box-reflect: below;
+  }
+  div{background-color: aqua;
+    width: 300px;
+    height: 300px;;
+}
+  div#myDiv {
+   transform: rotate(40deg);
+   margin-top: 400px;
+   /*transform: rotateX(150deg);*/
+   }
+   
