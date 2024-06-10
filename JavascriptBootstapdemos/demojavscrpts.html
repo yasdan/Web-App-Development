@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <title>Javascript samples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            Button{
+                margin: 30px;
+                border: 2px solid blue;
+                border-radius: 25%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Some Javascript Examples
+        </h1>
+        <button>Change color</button>
+        <div id="d1">
+            <h1>Randomely I will change my color</h1>
+        </div>
+        <script>
+            const btn = document.querySelector("button");
+
+            function random(number) {
+                return Math.floor(Math.random() * (number + 1));
+            }
+
+            btn.addEventListener("click", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+            const divcol = `rgb(${random(155)} ${random(155)} ${random(155)})`;
+            document.getElementById("d1").style.backgroundColor=divcol;
+             });
+
+        </script>
+    </body>
+</html>

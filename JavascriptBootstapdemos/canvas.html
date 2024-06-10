@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Canvas demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                width: 100%;
+                height: inherit;
+                background: #ddd;
+            }
+
+            canvas {
+                    display: block;
+            }
+
+            body {
+                 margin: 0;
+                }
+
+            button {
+                position: relative;
+                top: 25px;
+                left: 155px;
+            }
+            #heading{
+                margin-top: 5px;
+                margin-left: 155px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="heading"> Canvas example with javascript</h1>
+        <button>Draw on the canvas</button>
+        <canvas></canvas>
+
+        <script>
+            const btn = document.querySelector("button"); 
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+
+                document.addEventListener("DOMContentLoaded", () => {
+                canvas.width = document.documentElement.clientWidth;
+                canvas.height = document.documentElement.clientHeight;
+                });
+
+                function random(number) {
+                return Math.floor(Math.random() * number);
+                }
+
+                function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < 100; i++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgb(22 222 9 / 50%)";
+                    ctx.arc(
+                    random(canvas.width),
+                    random(canvas.height),
+                    random(50),
+                    0,
+                    2 * Math.PI,
+                    
+                    );
+                    ctx.fill();
+                }
+                }
+
+                btn.addEventListener("click", draw);
+
+        </script>
+    </body>
+</html>

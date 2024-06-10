@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <title>Basic demos of javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2> user intput storing in local storage and displaying</h2>
+        <h1>Name</h1>
+
+        <button>Click Me</button>
+
+        <script>
+            // references to the button and heading with variables
+
+            let myButton = document.querySelector("button");
+            let myHeading = document.querySelector("h1");
+
+            //function to get the input by prompt()
+
+            function setUserName() {
+                const myName = prompt("Please enter your name.");
+                if (!myName) {
+                  setUserName();
+                } else {
+                  localStorage.setItem("name", myName);
+                  myHeading.textContent = `Hey!   ${myName}`;
+                }
+              }
+              
+
+            // condition block and displaying the name.
+            if (!localStorage.getItem("name")) {
+                setUserName();
+              } else {
+                const storedName = localStorage.getItem("name");
+                myHeading.textContent = `Hey! ${storedName}`;
+              }
+            
+              //button click event handler
+              
+              myButton.onclick = () => {
+                setUserName();
+              };
+              
+
+        </script>
+
+    </body>
+</html>

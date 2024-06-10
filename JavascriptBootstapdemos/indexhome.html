@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </head>
+    <body>
+        <header>
+            <h1>Javascript Demo</h1>
+        </header>
+        <nav> </nav>
+        <section style="margin-left: 150px;">
+            <p id="demo"></p>
+            <h2 id ="d1">
+                heading
+            </h2>
+            <h2 id ="d2"></h2>
+            <h2 id="d3" onmouseenter="displayName()" onmouseleave="hideName()">hi</h2>
+            <h2 id="d4"> </h2>
+            <h2 id="d5"></h2>
+            <h2 id="d6">Hello!</h2>
+            <h2 id="d7" onmouseover="showstudent()">student </h2>
+            <Button onclick="gettime()">Show Time</Button>
+            <button onclick="showname()">Name</button>
+            <button style="width: 100px; height: 50px " onclick="document.getElementById('d3').innerHTML=Date()" >Click Me</button>
+        </section>
+
+        <!--<script>
+            let st_name="Ramesh";
+            document.getElementById("demo").innerHTML = "Hello World! student name is "+
+            st_name;
+            let x=100;
+            document.getElementById("d1").innerHTML=x;
+            x="Ramesh";
+            document.getElementById("d2").innerHTML=x;
+            const names =["Anand","Minnu","Krish"];
+            let txt="";
+            for(let n in names){
+                txt += names[n]+" ";
+            };
+            document.getElementById("d5").innerHTML=txt;
+            let date = new Date();
+
+            function gettime(){
+                let date = Date();
+                document.getElementById("d4").innerHTML=date;
+            }
+
+            function displayName(){
+                document.getElementById('d3').innerHTML="Abdul";
+            }
+            function hideName(){
+                document.getElementById('d3').innerHTML="hi";
+            }
+            const person={
+                fname:"Salamna", lname:" Khan",
+                fullname:function(){
+                    return this.fname+this.lname;
+                }
+            }
+            function showname(){
+            let name= person.fullname();
+            document.getElementById("d6").innerHTML=name;
+            }
+
+            function Student(fullname, course, college){
+                this.fullname=fullname;
+                this.course=course;
+                this.college=college;
+            }
+            const student1= new Student("Anand"," B.Tech 2nd Year", " P ES Engineering college");
+           
+            function showstudent(){
+            let s= student1.fullname+student1.course+student1.college;
+            document.getElementById('d7').innerHTML=s;
+            }
+        </script> -->
+        <script src="scripts/myscript.js"></script>
+    </body>
+</html>
